@@ -1,0 +1,11 @@
+#mainParent {
+	border: 1px solid red;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: red;
+}
+
+#barChart {
+	background-color: blue;
+}
