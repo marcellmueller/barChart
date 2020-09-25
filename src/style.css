@@ -11,10 +11,13 @@ body {
 #barChart {
   background-color: #f7f7f7;
   min-width: 600px;
+  padding: 5px;
 }
 
+#barChartTitle {
+  text-align: center;
+}
 .bars {
-  width: 99%;
   margin: 4px;
   background-color: bisque;
 }
