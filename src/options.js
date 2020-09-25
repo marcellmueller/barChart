@@ -10,6 +10,7 @@ export let options = {
 };
 
 export const initOptions = (options) => {
+  document.getElementById("barChart").style.transform = "none";
   let title = document.getElementById("barChartTitle");
   title.style.fontSize = options.titleFontSize + "px";
   title.style.backgroundColor = options.titleBackgroundColor;
