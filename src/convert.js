@@ -1,26 +1,13 @@
 //check to see if bar array is just numbers
 //or object format for individual colors
-export const checkBarArr = (numbers) => {
-  if (numbers[0]["number"]) {
-    return true;
-  } else {
-    return false;
-  }
-};
 
 export const barRangeConvert = (numbers, value) => {
   //find the highest and lowest numbers in our array
-  let low = numbers[0].number;
+  let low = numbers[0];
   let high = 0;
   for (let i = 0; i < numbers.length; i++) {
-    //check to see type of number array for input
-    let currentNum;
-    checkBarArr(numbers)
-      ? (currentNum = numbers[i].number)
-      : (currentNum = numbers[i]);
-
-    currentNum < low ? (low = currentNum) : null;
-    currentNum > high ? (high = currentNum) : null;
+    numbers[i] < low ? (low = numbers[i]) : null;
+    numbers[i] > high ? (high = numbers[i]) : null;
   }
   let percent = percentage(value, low, high);
   percent === 0 ? (percent = 1) : null;
@@ -33,4 +20,14 @@ export const barRangeConvert = (numbers, value) => {
 const percentage = (value, minRange, maxRange) => {
   let percent = ((value - minRange) / (maxRange - minRange)) * 100;
   return percent;
+};
+
+export let convertArr = (numbersArr, numbers) => {
+  if (numbersArr[0].number) {
+    for (let i = 0; i < numbersArr.length; i++) {
+      numbers.push(numbersArr[i].number);
+    }
+  } else {
+    numbers = numbersArr;
+  }
 };

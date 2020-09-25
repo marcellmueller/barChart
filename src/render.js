@@ -1,34 +1,28 @@
-import { barRangeConvert, checkBarArr } from "./convert.js";
+import { barRangeConvert } from "./convert.js";
 import { options } from "./options.js";
-
 //rendering to DOM related code in here
 
-export const renderChart = (numbers) => {
+export const renderChart = (numbers, numbersArr) => {
   for (let i = 0; i < numbers.length; i++) {
-    let currentNum;
-    checkBarArr(numbers)
-      ? (currentNum = numbers[i].number)
-      : (currentNum = numbers[i]);
-
-    let range = barRangeConvert(numbers, currentNum);
+    let range = barRangeConvert(numbers, numbers[i]);
     let barChart = document.getElementById("barChart");
     let bar = document.createElement("div");
     bar.classList.add("bars");
-    bar.setAttribute("id", currentNum);
+    bar.setAttribute("id", numbers[i]);
 
-    bar.style.backgroundColor = barColor(numbers, i, options);
+    bar.style.backgroundColor = barColor(numbersArr, i, options);
     bar.style.width = range + "%";
-    bar.innerHTML = currentNum;
+    bar.innerHTML = numbers[i];
     barChart.appendChild(bar);
   }
 };
 
 //checks if individual bar colors are definied in numbers array
 //else all bars are set to color defined in options.js
-const barColor = (numbers, i, options) => {
+const barColor = (numbersArr, i, options) => {
   let color;
-  if (numbers[0]["color"]) {
-    color = numbers[i].color;
+  if (numbersArr[0]["color"]) {
+    color = numbersArr[i].color;
   } else {
     color = options.barColor;
   }

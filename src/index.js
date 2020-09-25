@@ -1,6 +1,7 @@
 import { renderChart } from "./render.js";
+import { convertArr } from "./convert.js";
 
-let numbers = [
+let numbersArr = [
   { number: 1, color: "#ffc93c" },
   { number: 2, color: "#fac945" },
   { number: 3, color: "#f5ca4f" },
@@ -13,8 +14,8 @@ let numbers = [
   { number: 10, color: "#d2ce92" },
   { number: 11, color: "#cecf9b" },
   { number: 12, color: "#c9cfa5" },
-  { number: 13, color: "#c4d0ae" },
-  { number: 14, color: "#bfd1b8" },
+  { number: 12, color: "#c4d0ae" },
+  { number: 12.5, color: "#bfd1b8" },
   { number: 15, color: "#bad1c2" },
   { number: 16, color: "#b5d2cb" },
   { number: 17, color: "#b0d3d5" },
@@ -45,4 +46,8 @@ let numbers = [
 //   19,
 //   20,
 // ];
-renderChart(numbers);
+
+let numbers = [];
+
+convertArr(numbersArr, numbers);
+renderChart(numbers, numbersArr);
