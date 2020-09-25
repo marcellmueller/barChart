@@ -1,11 +1,20 @@
+body {
+  background-color: #a8dadc;
+  font-family: "Ubuntu", sans-serif;
+}
 #mainParent {
-	border: 1px solid red;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #barChart {
-	background-color: blue;
+  background-color: #f7f7f7;
+  min-width: 600px;
+}
+
+.bars {
+  width: 99%;
+  margin: 4px;
+  background-color: bisque;
 }
