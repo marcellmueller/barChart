@@ -71,12 +71,3 @@ let numbers = [];
 
 convertArr(numbersArr, numbers);
 renderChart(numbers, numbersArr);
-
-check = document.getElementById("check");
-check.addEventListener("change", (event) => {
-  if (event.target.checked) {
-    document.getElementById("barChart").style.transform = "none";
-  } else {
-    document.getElementById("barChart").style.transform = "rotate(-90deg)";
-  }
-});
