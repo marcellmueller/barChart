@@ -1,3 +1,5 @@
+//just making sure eslint is linting with some bad code!
+
 var foo = 1;
 console.log(foo);
 var bar;
