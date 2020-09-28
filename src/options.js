@@ -1,17 +1,17 @@
 export let options = {
-  barColor: "#457b9d",
-  labelColor: "#f7f7f7",
-  barSpacing: "5px",
-  chartAxis: "horizontal",
-  barLabelPosition: "right",
+  barColor: '#457b9d',
+  labelColor: '#f7f7f7',
+  barSpacing: '5px',
+  chartAxis: 'horizontal',
+  barLabelPosition: 'right',
   titleFontSize: 30,
-  titleFontColor: "#f7f7f7",
-  titleBackgroundColor: "#f7f7f7",
+  titleFontColor: '#f7f7f7',
+  titleBackgroundColor: '#f7f7f7',
 };
 
 export const initOptions = (options) => {
-  document.getElementById("barChart").style.transform = "none";
-  let title = document.getElementById("barChartTitle");
-  title.style.fontSize = options.titleFontSize + "px";
+  document.getElementById('barChart').style.transform = 'none';
+  let title = document.getElementById('barChartTitle');
+  title.style.fontSize = options.titleFontSize + 'px';
   title.style.backgroundColor = options.titleBackgroundColor;
 };
