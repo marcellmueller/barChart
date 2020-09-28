@@ -12,7 +12,7 @@ export const renderChart = (numbers, numbersArr) => {
 
     bar.style.color = options.labelColor;
     bar.style.backgroundColor = barColor(numbersArr, i, options);
-    bar.style.width = range + '%';
+    bar.style.height = range + '%';
     bar.style.textAlign = options.barLabelPosition;
     bar.innerHTML = numbers[i];
     barChart.appendChild(bar);
