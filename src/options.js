@@ -1,4 +1,5 @@
 export let options = {
+  title: 'Bar Chart Prototype',
   barColor: '#457b9d',
   labelColor: '#f7f7f7',
   barSpacing: '5px',
@@ -10,8 +11,9 @@ export let options = {
 };
 
 export const initOptions = (options) => {
+  document.getElementById('barChartTitle').textContent = options.title;
   document.getElementById('barChart').style.transform = 'none';
-  let title = document.getElementById('barChartTitle');
-  title.style.fontSize = options.titleFontSize + 'px';
-  title.style.backgroundColor = options.titleBackgroundColor;
+  let chartTitle = document.getElementById('barChartTitle');
+  chartTitle.style.fontSize = options.titleFontSize + 'px';
+  chartTitle.style.backgroundColor = options.titleBackgroundColor;
 };

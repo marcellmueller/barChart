@@ -13,22 +13,47 @@ body {
   height: 600px;
   border-collapse: collapse;
   background-color: #f7f7f7;
+
+  padding-top: 4px;
   display: flex;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    lightgrey 0,
+    lightgrey 1px,
+    transparent 1px,
+    transparent 60px
+  );
 }
 
+#barChartParent {
+  border-style: solid;
+  border-width: 1px;
+}
 #barChartTitle {
   text-align: center;
 }
 .bars {
   align-self: flex-end;
-  display: inline-block;
   margin: 0.3em;
+  margin-top: 10%;
   background-color: bisque;
   height: 0;
   width: 1em;
   font-size: 0.5em;
+  border-radius: 1em;
 }
 
 .bars:hover {
   filter: invert(40%);
+}
+
+.chartLines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-color: black;
+  border-style: solid;
+  background-color: red;
 }
