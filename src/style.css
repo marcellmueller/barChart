@@ -24,8 +24,17 @@ body {
     transparent 60px
   );
 }
-
+#sideChart {
+  margin-top: 5px;
+  position: absolute;
+}
+.sideChart {
+  padding: 1.3em;
+  padding-left: 0;
+}
 #barChartParent {
+  display: inline-block;
+
   -webkit-box-shadow: 0px 8px 23px -1px #000000;
   box-shadow: 0px 8px 23px -1px #000000;
   border-style: solid;

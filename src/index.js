@@ -1,7 +1,7 @@
 import { renderChart } from './render.js';
 import { convertArr } from './convert.js';
 
-let numbersArr = [
+const numbersArr = [
   { number: 1, color: '#ffc93c' },
   { number: 2, color: '#fac945' },
   { number: 3, color: '#f5ca4f' },
@@ -98,3 +98,9 @@ let numbers = [];
 
 convertArr(numbersArr, numbers);
 renderChart(numbers, numbersArr);
+
+let bars = document.getElementsByClassName('.bars');
+
+bars.onmouseover = () => {
+  console.log('hello');
+};
